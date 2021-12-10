@@ -1,0 +1,2 @@
+# New-BAEMIN
+2021-2 HCI 프로젝트
