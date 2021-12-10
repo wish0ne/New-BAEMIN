@@ -1,0 +1,30 @@
+.Header {
+  height: 162px;
+  background: #2ac1bc;
+  border-radius: 0 0 30px 30px;
+  text-align: center;
+  /* padding-top: 34px; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.addressContent {
+  height: 46px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+.address {
+  color: white;
+  font-size: 25px;
+  line-height: 46px;
+  vertical-align: top;
+  display: inline-block;
+}
+.textInput {
+  width: 561px;
+  display: inline-block;
+  border: none;
+  height: 48px;
+  border-radius: 5px;
+}
