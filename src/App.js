@@ -1,11 +1,12 @@
 import React, { Fragment } from "react";
 import Header from "./components/Header";
+import Category from "./components/Category";
 
 function App() {
   return (
     <Fragment>
       <Header />
-      <p>this is first area</p>
+      <Category />
     </Fragment>
   );
 }
