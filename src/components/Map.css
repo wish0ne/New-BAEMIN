@@ -1,6 +1,7 @@
 .Map {
   flex-basis: 65%;
   display: flex;
+  position: relative;
 }
 
 .DefaultMap {
@@ -25,4 +26,66 @@
   object-fit: cover;
   bottom: 0;
   right: 0;
+}
+
+.Panel {
+  position: absolute;
+  height: 80px;
+  left: 20px;
+  right: 20px;
+  bottom: 30px;
+  border-radius: 8px;
+  background-color: #2ac1bc;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.Panel .info {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
+}
+
+.Panel .bigInfo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.Panel .walk {
+  font-size: 18px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.Panel .bigInfo .minute {
+  font-size: 32px;
+  margin-right: 10px;
+  line-height: 35px;
+}
+
+.Panel .bigInfo .meter {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.Panel .kcal {
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.Panel .order {
+  display: flex;
+}
+
+.Panel .order:hover {
+  cursor: pointer;
+  color: #fbf46d;
+}
+
+.Panel .order span {
+  font-size: 25px;
+  font-weight: bold;
 }

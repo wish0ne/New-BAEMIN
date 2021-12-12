@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Fragment, useEffect, useRef } from "react";
 import "./Map.css";
+import { BiChevronRight } from "react-icons/bi";
 
 const DefaultMap = () => {
   return (
@@ -11,10 +12,49 @@ const DefaultMap = () => {
     </div>
   );
 };
+
+const Panel = () => {
+  return (
+    <div className="Panel">
+      <div className="info">
+        <span className="walk">도보</span>
+        <div className="bigInfo">
+          <span className="minute">10분</span>
+          <span className="meter">821m</span>
+        </div>
+        <span className="kcal">77kcal</span>
+      </div>
+      <div className="order">
+        <span>주문하러가기</span>
+        <BiChevronRight size={40} />
+      </div>
+    </div>
+  );
+};
+
+const NaverMap = () => {
+  const container = useRef(null);
+
+  const mapOptions = {
+    center: new window.naver.maps.LatLng(37.3595704, 127.105399),
+    zoom: 18,
+  };
+  useEffect(() => {
+    new window.naver.maps.Map(container.current, mapOptions);
+  });
+  return (
+    <Fragment>
+      <div id="map" ref={container} style={{ width: "100%" }}></div>
+    </Fragment>
+  );
+};
+
 const Map = () => {
   return (
     <div className="Map">
-      <DefaultMap />
+      {/* <DefaultMap /> */}
+      <NaverMap />
+      <Panel />
     </div>
   );
 };
