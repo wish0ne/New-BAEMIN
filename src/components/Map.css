@@ -1,4 +1,28 @@
 .Map {
-  background: violet;
   flex-basis: 65%;
+  display: flex;
+}
+
+.DefaultMap {
+  width: 100%;
+  padding-top: 150px;
+}
+
+.DefaultMap .strong {
+  font-size: 120px;
+  text-align: center;
+}
+.DefaultMap .light {
+  font-size: 36px;
+  color: #c4c4c4;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+}
+
+.DefaultMap .images {
+  position: fixed;
+  width: 400px;
+  object-fit: cover;
+  bottom: 0;
+  right: 0;
 }

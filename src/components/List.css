@@ -92,6 +92,11 @@
   align-items: center;
 }
 
+.restaurant:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
 .restaurantWrap .restaurant img {
   border: 1px solid #ececec;
   display: inline-block;
