@@ -8,7 +8,7 @@ import { BiChevronDown, BiWalk } from "react-icons/bi";
 import { IoLocationOutline } from "react-icons/io5";
 import "./List.css";
 
-const List = () => {
+const List = (props) => {
   return (
     <div className="List">
       <div className="categoryWrap">
@@ -44,12 +44,14 @@ const List = () => {
         <div>
           <span>거리순</span>
         </div>
-        <div>
-          <span>도보시간순</span>
-        </div>
       </div>
       <div className="restaurantWrap">
-        <div className="restaurant">
+        <div
+          className="restaurant"
+          onClick={() => {
+            props.clickRes("이디야", 10, 292, 77, 0);
+          }}
+        >
           <img alt="이디야" src="img/이디야.png" />
           <div className="text">
             <div className="title">
@@ -72,7 +74,12 @@ const List = () => {
             </div>
           </div>
         </div>
-        <div className="restaurant">
+        <div
+          className="restaurant"
+          onClick={() => {
+            props.clickRes("파리바게트", 10, 560, 120, 1);
+          }}
+        >
           <img alt="파리바게트" src="img/파리바게트.png" />
           <div className="text">
             <div className="title">

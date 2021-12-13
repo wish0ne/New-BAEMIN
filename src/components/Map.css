@@ -2,6 +2,7 @@
   flex-basis: 65%;
   display: flex;
   position: relative;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .DefaultMap {
@@ -88,4 +89,10 @@
 .Panel .order span {
   font-size: 25px;
   font-weight: bold;
+}
+
+.cs_mapbridge {
+  width: 50px;
+  height: 50px;
+  background: blueviolet;
 }
