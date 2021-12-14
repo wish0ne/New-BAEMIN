@@ -1,18 +1,20 @@
 .Header {
-  height: 162px;
+  height: 15%;
   background: #2ac1bc;
   border-radius: 0 0 30px 30px;
   text-align: center;
-  /* padding-top: 34px; */
-  position: fixed;
+  padding-top: 10px;
+  box-sizing: border-box;
+  /* position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+  right: 0; */
 }
 .addressContent {
   height: 46px;
+  line-height:46px;
   margin-bottom: 10px;
-  margin-top: 25px;
+  /* margin-top: 25px; */
 }
 .address {
   color: white;

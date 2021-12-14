@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import {
   AiFillStar,
   AiOutlineControl,
@@ -8,7 +8,69 @@ import { BiChevronDown, BiWalk } from "react-icons/bi";
 import { IoLocationOutline } from "react-icons/io5";
 import "./List.css";
 
+const Restaurant = (props)=>{
+  const meter = [
+    {name:"하우스크림", star:'5.0', review:'(100+)', menu:'하우스 크로플', time:'7~17분', meter:'861m', walk:'23분', source:'하우스크림'},
+    {name:"타니예르베이커리", star:'5.0', review:'(50+)', menu:'바게트, 치아바타 앙버터', time:'7~17분', meter:'879m', walk:'24분', source:'타니예르베이커리'},
+    {name:"반달커피 서천점", star:'5.0', review:'(100+)', menu:'아메리카노, 바닐라라떼', time:'13~23분', meter:'925m', walk:'24분', source:'반달커피'},
+    {name:"메가엠지씨커피 용인 서천마을점", star:'4.8', review:'(30+)', menu:'(ICE)아메리카노, 춘천감자빵세트(HOT)', time:'8~18분', meter:'981m', walk:'27분', source:'메가커피'},
+    {name:"배스킨라빈스 용인서천점", star:'4.9', review:'(100+)', menu:'패밀리, 쿼터', time:'26~36분', meter:'983m', walk:'28분', source:'배스킨라빈스'},
+    {name:"파리바게뜨 용인 서천마을점", star:'4.9', review:'(20+)', menu:'추억의 소시지빵', time:'7~27분', meter:'983m', walk:'27분', source:'파리바게트'},
+    {name:"이디야커피 용인서천점", star:'5.0', review:'(50+)', menu:'꿀호떡 세트, 복분자 뱅쇼 세트', time:'5~15분', meter:'985m', walk:'24분', source:'이디야'},
+    {name:"푸오코", star:'5.0', review:'(20+)', menu:'차돌박이 샐럳, 촉촉닭가슴살 샐러드', time:'7~17분', meter:'991', walk:'27분', source:'푸오코'},
+  ];
+
+  const walk = [
+    {name:"하우스크림", star:'5.0', review:'(100+)', menu:'하우스 크로플', time:'7~17분', meter:'861m', walk:'23분', source:'하우스크림'},
+    {name:"타니예르베이커리", star:'5.0', review:'(50+)', menu:'바게트, 치아바타 앙버터', time:'7~17분', meter:'879m', walk:'24분', source:'타니예르베이커리'},
+    {name:"반달커피 서천점", star:'5.0', review:'(100+)', menu:'아메리카노, 바닐라라떼', time:'13~23분', meter:'925m', walk:'24분', source:'반달커피'},
+    {name:"이디야커피 용인서천점", star:'5.0', review:'(50+)', menu:'꿀호떡 세트, 복분자 뱅쇼 세트', time:'5~15분', meter:'985m', walk:'24분', source:'이디야'},
+    {name:"메가엠지씨커피 용인 서천마을점", star:'4.8', review:'(30+)', menu:'(ICE)아메리카노, 춘천감자빵세트(HOT)', time:'8~18분', meter:'981m', walk:'27분', source:'메가커피'},
+    {name:"배스킨라빈스 용인서천점", star:'4.9', review:'(100+)', menu:'패밀리, 쿼터', time:'26~36분', meter:'983m', walk:'28분', source:'배스킨라빈스'}, 
+    {name:"푸오코", star:'5.0', review:'(20+)', menu:'차돌박이 샐럳, 촉촉닭가슴살 샐러드', time:'7~17분', meter:'991', walk:'27분', source:'푸오코'},
+    {name:"파리바게뜨 용인 서천마을점", star:'4.9', review:'(20+)', menu:'추억의 소시지빵', time:'7~27분', meter:'983m', walk:'27분', source:'파리바게트'},
+  ];
+
+  console.log(props.isMeterOrder);
+  const orderArr = props.isMeterOrder?meter:walk;
+
+  const restList = orderArr.map(m=>{
+    const source = `img/${m.source}.png`
+    return(
+  <div className="restaurant">
+    <img alt={m.name} src={source}/>
+    <div className="text">
+      <div className="title">
+        <strong>{m.name}</strong>
+        <div className="packaging">포장</div>
+        <div className="packaging">매장</div>
+      </div>
+      <div className="starMenu">
+        <AiFillStar color="#F6E547" />
+        <strong>{m.star}</strong>
+        <span>{m.review}</span>
+        <span className="menu">
+          {m.menu}
+        </span>
+      </div>
+      <div className="info">
+        <AiOutlineClockCircle size={14} />
+        <span>{m.time}</span>
+        <IoLocationOutline size={14} />
+        <span>{m.meter}</span>
+        <BiWalk size={14} />
+        <span>{m.walk}</span>
+      </div>
+    </div>
+  </div>
+  )});
+  console.log(restList);
+
+  return (<div className="restaurantWrap">{restList}</div>);
+}
+
 const List = (props) => {
+  const [isMeterOrder, setIsMeterOrder] = useState(true);
   return (
     <div className="List">
       <div className="categoryWrap">
@@ -48,45 +110,19 @@ const List = (props) => {
           </div>
         </div>
         <div>
-          <div className="filter selected" >
+          <div className="filter selected" onClick={()=>{setIsMeterOrder(true)}}>
           <span>거리순(m)</span>
         </div>
         </div>
         <div>
-          <div className="filter">
+          <div className="filter" onClick={()=>{setIsMeterOrder(false)}}>
           <span>도보시간순(분)</span>
         </div>
         </div>
       </div>
-      <div className="restaurantWrap">
-      {/* <div className="restaurant"   onClick={() => {
-            props.clickRes("투썸플레이스", 18, 1.2, 55); //도보, 미터, 칼로리, 인덱스
-          }}>
-          <img alt="투썸플레이스" src="img/투썸플레이스.png" />
-          <div className="text">
-            <div className="title">
-              <strong>투썸플레이스 경희대국제캠퍼스점</strong>
-              <div className="packaging">신규</div>
-              <div className="packaging">포장</div>
-            </div>
-            <div className="starMenu">
-              <AiFillStar color="#F6E547" />
-              <strong>5.0</strong>
-              <span>(10+)</span>
-              <span className="menu">
-                시그니처뱅쇼(L), 스트로베리초콜릿프라페(L)
-              </span>
-            </div>
-            <div className="info">
-              <AiOutlineClockCircle size={14} />
-              <span>21~31분</span>
-              <IoLocationOutline size={14} />
-              <span>528m</span>
-              <BiWalk size={14} />
-              <span>도보 10분</span>
-            </div>
-          </div>
-        </div> */}
+      <Restaurant isMeterOrder={isMeterOrder}/>
+      {/* <div className="restaurantWrap">
+        <Restaurant/>
         <div className="restaurant" onClick={() => {
             props.clickRes("하우스크림", 23, 861, 2); //도보, 미터, 칼로리
           }}>
@@ -289,7 +325,7 @@ const List = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

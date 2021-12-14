@@ -1,7 +1,9 @@
 .wrap {
-  padding-top: 162px;
+  padding:20px 0;
   padding-left: 80px;
   padding-right: 80px;
+  height:85%;
+  box-sizing: border-box;
 }
 
 table {

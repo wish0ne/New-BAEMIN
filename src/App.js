@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
-import Category from "./components/Category";
+import Menu from "./screens/Menu";
 import Packaging from "./screens/Packaging";
 
 function App() {
@@ -10,26 +9,13 @@ function App() {
       <Route
         path="/"
         element={
-          <>
-            <Header />
-            <Category />
-          </>
+          <Menu/>
         }
       />
       <Route
         path="/packaging"
         element={
           <Packaging />
-          // <div
-          //   style={{
-          //     display: "flex",
-          //     height: "100%",
-          //     width: "100%",
-          //   }}
-          // >
-          //   <List />
-          //   <Map />
-          // </div>
         }
       />
     </Routes>
