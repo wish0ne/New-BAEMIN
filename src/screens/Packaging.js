@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Map from "../components/Map";
 import List from "../components/List";
-import Detail from "../components/Detail";
 import "./Packaging.css";
 
 const Packaging = () => {

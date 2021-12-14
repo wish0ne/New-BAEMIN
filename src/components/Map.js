@@ -106,16 +106,16 @@ const NaverMap = (props) => {
         content: contentString,
         maxWidth: 300,
         backgroundColor: "white",
-        borderColor:'#E4E4E4',
+        borderColor: "#E4E4E4",
         anchorSize: new window.naver.maps.Size(20, 5),
         //anchorSkew: true,
         anchorColor: "white",
         pixelOffset: new window.naver.maps.Point(5, -10),
       });
 
-      var index =0;
-      for(let i=0; i<8; i++){
-        if(props.markers[i].name===props.selected.name){
+      var index = 0;
+      for (let i = 0; i < 8; i++) {
+        if (props.markers[i].name === props.selected.name) {
           index = i;
           break;
         }
@@ -131,13 +131,13 @@ const NaverMap = (props) => {
         // },
       });
 
-      window.naver.maps.Event.addListener(dest, "click", function(e) {
+      window.naver.maps.Event.addListener(dest, "click", function (e) {
         if (infowindow.getMap()) {
-            infowindow.close();
+          infowindow.close();
         } else {
-            infowindow.open(map, dest);
+          infowindow.open(map, dest);
         }
-    });
+      });
 
       infowindow.open(map, dest);
 
@@ -153,9 +153,9 @@ const NaverMap = (props) => {
           new window.naver.maps.LatLng(37.239574, 127.0837813), //내위치
           new window.naver.maps.LatLng(37.2399322, 127.0837786),
           new window.naver.maps.LatLng(37.2399552, 127.0829295),
-          new window.naver.maps.LatLng(37.2400107,127.0820231),
+          new window.naver.maps.LatLng(37.2400107, 127.0820231),
           new window.naver.maps.LatLng(37.2402723, 127.0821224),
-          new window.naver.maps.LatLng(37.2403075,127.0803279),
+          new window.naver.maps.LatLng(37.2403075, 127.0803279),
           new window.naver.maps.LatLng(37.2402765, 127.080171),
           new window.naver.maps.LatLng(37.2402701, 127.0796064),
           new window.naver.maps.LatLng(37.240474, 127.0791558),
@@ -164,9 +164,9 @@ const NaverMap = (props) => {
           new window.naver.maps.LatLng(37.2411563, 127.0788085),
           new window.naver.maps.LatLng(37.2412011, 127.078502),
           new window.naver.maps.LatLng(37.2413623, 127.0781004),
-          new window.naver.maps.LatLng(37.2414435,127.0780078),
+          new window.naver.maps.LatLng(37.2414435, 127.0780078),
           new window.naver.maps.LatLng(37.2414974, 127.077935),
-          new window.naver.maps.LatLng(37.2415636,127.077747 ),
+          new window.naver.maps.LatLng(37.2415636, 127.077747),
           new window.naver.maps.LatLng(37.2415908, 127.0775887),
           new window.naver.maps.LatLng(37.241618, 127.0772595),
           new window.naver.maps.LatLng(37.2416223, 127.0770597),
@@ -174,7 +174,6 @@ const NaverMap = (props) => {
           new window.naver.maps.LatLng(37.2417878, 127.0762906),
           new window.naver.maps.LatLng(37.2417883, 127.0762852),
           new window.naver.maps.LatLng(37.2419394, 127.0761652),
-
 
           new window.naver.maps.LatLng(37.2420013, 127.0759848),
           new window.naver.maps.LatLng(37.2420243, 127.0758963),
@@ -261,18 +260,18 @@ const Map = (props) => {
     "서천동 814",
     "기흥구 서천로 121",
     "서천동 833",
-    "서그내로15번길 33-2"
-  ]; 
+    "서그내로15번길 33-2",
+  ];
   const restName = [
-  //  "투썸플레이스",
-   "하우스크림",
-   "타니예르베이커리",
-   "반달커피",
-   "메가커피",
-   "배스킨라빈스",
-   "파리바게트",
-   "이디야",
-   "푸오코"
+    //  "투썸플레이스",
+    "하우스크림",
+    "타니예르베이커리",
+    "반달커피",
+    "메가커피",
+    "배스킨라빈스",
+    "파리바게트",
+    "이디야",
+    "푸오코",
   ];
 
   //주소로 좌표 검색

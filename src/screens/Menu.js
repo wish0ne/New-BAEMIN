@@ -6,8 +6,8 @@ import "./Menu.css";
 const Menu = () => {
   return (
     <div className="Menu">
-        <Header />
-        <Category />
+      <Header />
+      <Category />
     </div>
   );
 };
