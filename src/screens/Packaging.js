@@ -9,16 +9,14 @@ const Packaging = () => {
     minute: 0,
     meter: 0,
     kcal: 0,
-    index: 0,
   });
 
-  const clickRes = (name, minute, meter, kcal, index) => {
+  const clickRes = (name, minute, meter, kcal) => {
     setSelected({
       name: name,
       minute: minute,
       meter: meter,
       kcal: kcal,
-      index: index,
     });
   };
   return (
