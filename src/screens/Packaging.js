@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Map from "../components/Map";
 import List from "../components/List";
+import Detail from "../components/Detail";
 import "./Packaging.css";
 
 const Packaging = () => {
@@ -19,10 +20,23 @@ const Packaging = () => {
       kcal: kcal,
     });
   };
+
+  const clickMenu = () => {
+    setIsMenu(true);
+  };
+
+  const goBack = () => {
+    setIsMenu(false);
+  };
+
+  const [isMenu, setIsMenu] = useState(false);
   return (
     <div className="PackagingWrap">
-      <List clickRes={clickRes} />
-      {/* <Detail/> */}
+      {!isMenu ? (
+        <List clickRes={clickRes} clickMenu={clickMenu} />
+      ) : (
+        <Detail goBack={goBack} />
+      )}
       <Map selected={selected} />
     </div>
   );

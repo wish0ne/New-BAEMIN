@@ -185,6 +185,7 @@ const Restaurant = (props) => {
         className="restaurant"
         onClick={() => {
           props.clickRes("하우스크림", 23, 861, 2); //도보, 미터, 칼로리
+          props.clickMenu();
         }}
       >
         <img alt={m.name} src={source} />
@@ -278,7 +279,11 @@ const List = (props) => {
           </div>
         </div>
       </div>
-      <Restaurant isMeterOrder={isMeterOrder} clickRes={props.clickRes} />
+      <Restaurant
+        isMeterOrder={isMeterOrder}
+        clickRes={props.clickRes}
+        clickMenu={props.clickMenu}
+      />
     </div>
   );
 };
