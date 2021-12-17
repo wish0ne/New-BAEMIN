@@ -27,7 +27,6 @@ function Home() {
     const closeSideMenu = () => {
         setSideMenuRight("-25rem")
     }
-
     useEffect(()=>{
         var now = new Date()
         setHours(now.getHours())
@@ -50,6 +49,7 @@ function Home() {
             </div>
             <div className="header unfixed-header">
             <label htmlFor="search-menu" id="find-icon"><FaSearch/></label>
+
                 <input
                 className="search-input"
                 type="text"

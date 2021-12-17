@@ -8,7 +8,6 @@ import OrderComplete from './components/delivery/OrderComplete';
 import Store from './components/delivery/Store';
 import MenuDetail from './components/delivery/MenuDetail';
 
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
