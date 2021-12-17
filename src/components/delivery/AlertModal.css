@@ -1,0 +1,16 @@
+.alert-modal-background {
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF10;
+}
+
+.alert-modal-wrapper {
+    width: 30rem;
+    height: 15rem;
+    position: fixed;
+    top: 0px;
+    left: calc(50% - 15rem);
+    background-color: white;
+    box-shadow: 0px -2px 4px #C4C4C4;
+    border-radius: 0rem 0rem 1rem 1rem;
+}

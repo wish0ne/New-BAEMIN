@@ -1,21 +1,32 @@
 import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import './Home.css';
 import { BsChevronDown } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
+
+import SideMenu from "./SideMenu";
+
+import './Home.css';
 
 function Home() {
     const navigation = useNavigate();
     let [hours, setHours] = useState();
     let [minutes, setMinutes] = useState();
+    let [sideMenuRight, setSideMenuRight] = useState("-25rem");
 
     const goToDelivery = () => {
-        navigation('/navigation')
+        navigation('/delivery')
     }
     const goToPackaging = () => {
         navigation('/packaging')
     }
 
+    const openSideMenu = () => {
+        setSideMenuRight("0rem")
+    }
+
+    const closeSideMenu = () => {
+        setSideMenuRight("-25rem")
+    }
     useEffect(()=>{
         var now = new Date()
         setHours(now.getHours())
@@ -23,19 +34,22 @@ function Home() {
     })
 
     return (
-        <div>
+        <div style={{overflowX:"hidden"}}>
+            <SideMenu sideMenuRight={sideMenuRight} closeSideMenu={closeSideMenu}></SideMenu>
             <div className="header fixed-header">
                 <div className="address">
                     용인시 기흥구 덕영대로 1732 
                     <BsChevronDown />
                 </div>
-                <div className="eat-together-icon">
+                <div className="eat-together-icon"
+                onClick={openSideMenu}>
                     <div>함께</div>
                     <div>먹기</div>
                 </div>
             </div>
             <div className="header unfixed-header">
-            <label htmlFor="search-menu"><FaSearch/></label>
+            <label htmlFor="search-menu" id="find-icon"><FaSearch/></label>
+
                 <input
                 className="search-input"
                 type="text"

@@ -51,7 +51,7 @@
     z-index: 2;
 }
 
-label {
+#find-icon {
   position: relative;
   left: 25px;
   top: 5px;
