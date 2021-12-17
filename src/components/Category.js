@@ -1,18 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Category.css";
 
 const Category = () => {
+  const navigation = useNavigate();
+  const { state } = useLocation();
+  const [deliveryMode, setDeliveryMode] = useState(false);
+
+  const goToWhere = () => {
+    if (!deliveryMode) {
+      navigation("/menu/packaging");
+    } else {
+      navigation("/choice-store");
+    }
+  };
+
+  useEffect(() => {
+    if (state !== null && state.delivery !== null) {
+      setDeliveryMode(true);
+    }
+  }, []);
+
   return (
     <div className="wrap">
       <table className="table">
         <tbody>
           <tr>
             <td>
-              <div>
-                <Link to="packaging">
-                  <img alt="카페디저트" src="img/카페디저트.jpg" />
-                </Link>
+              <div onClick={goToWhere}>
+                <img alt="카페디저트" src="img/카페디저트.jpg" />
               </div>
             </td>
             <td>

@@ -84,7 +84,7 @@ const Detail = (props) => {
         <BiChevronDown size={25} color="gray" />
       </div>
       <div className="menu">
-        <img src="img/대표메뉴.jpg" alt="대표메뉴" />
+        <img src="/img/대표메뉴.jpg" alt="대표메뉴" />
       </div>
     </div>
   );

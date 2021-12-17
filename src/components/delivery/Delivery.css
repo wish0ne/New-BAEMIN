@@ -1,0 +1,248 @@
+.title-header {
+  width: 100%;
+  height: 6rem;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+  border-bottom: 10px solid #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.delivery-content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.menu-delete-all {
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.menu-title-name {
+  width: 100%;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+  padding-top: 1rem;
+}
+
+.whose-menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.whose-menu {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+
+.menu-wrapper {
+  width: 20rem;
+  padding: 1rem;
+}
+
+.menu-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.menu-delete-icon {
+  color: #c4c4c4;
+}
+
+.menu-img {
+  height: 20rem;
+  top: 0px;
+  background-position: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-image: url("https://img.siksinhot.com/seeon/1591925459928208.jpeg");
+  z-index: 0;
+  width: 30rem;
+  height: 13.5rem;
+  margin: 0 auto;
+}
+
+.menu-detail {
+  font-size: 0.85rem;
+  font-weight: 300;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: left;
+  margin: 1rem;
+  color: #8a8a8a;
+}
+
+.menu-box-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-price {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.menu-len {
+  width: 7rem;
+  height: 2.2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #c4c4c4;
+  border-radius: 2rem;
+  float: right;
+  font-size: 0.85rem;
+  font-weight: 300;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#group-delivery-btn {
+  width: 25rem;
+  height: 3.2rem;
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.address-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  margin: 1rem;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.address-main {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.address-input {
+  width: 26rem;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #ececec;
+  box-shadow: none !important;
+  font-weight: 500 !important;
+  box-sizing: border-box;
+}
+
+.friend-row-box {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  margin: 0.5rem;
+  justify-content: space-between;
+}
+
+.my-pay-info {
+  background-color: #2ac1bc8e;
+  border-radius: 1rem;
+}
+
+.friends-pay-money {
+  margin-left: 4rem;
+  font-size: 1.2rem;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.card-wrapper {
+  width: 90%;
+  height: 13rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 2rem;
+  color: white;
+  background-color: #0b9793;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: 500;
+  font-family: "Noto Sans KR", sans-serif;
+  cursor: pointer;
+}
+
+.card-company {
+  width: 100%;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.card-name {
+  width: 100%;
+  text-align: right;
+}
+
+.check-pay-icon {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  color: #2ac1bc;
+  transition: 0.2s;
+}
+
+.re-alarm-btn {
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  background-color: #2ac1bc;
+  border-radius: 1rem;
+  font-weight: 300;
+  font-family: "Noto Sans KR", sans-serif;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  visibility: hidden;
+  margin-left: 1rem;
+  transition: 0.2s;
+}
+
+.re-alarm-btn:hover {
+  background-color: #0b9793;
+}
+
+.complete-content-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.complete-content-text {
+  font-size: 3rem;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.complete-content-icon {
+  font-size: 10rem;
+  color: #2ac1bc;
+}
+
+.complete-char-img {
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-image: url("../../assets/baemin-haehae.png");
+}

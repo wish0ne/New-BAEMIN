@@ -7,8 +7,14 @@ import {
 import { BiChevronDown, BiWalk } from "react-icons/bi";
 import { IoLocationOutline } from "react-icons/io5";
 import "./List.css";
+import { useNavigate } from "react-router-dom";
 
 const Restaurant = (props) => {
+  const navigation = useNavigate();
+
+  const goToStore = (e) => {
+    navigation("/store");
+  };
   const meter = [
     {
       name: "하우스크림",
@@ -179,13 +185,15 @@ const Restaurant = (props) => {
   const orderArr = props.isMeterOrder ? meter : walk;
 
   const restList = orderArr.map((m) => {
-    const source = `img/${m.source}.png`;
+    const source = `/img/${m.source}.png`;
     return (
       <div
         className="restaurant"
         onClick={() => {
-          props.clickRes("하우스크림", 23, 861, 2); //도보, 미터, 칼로리
-          props.clickMenu();
+          m.name === "하우스크림"
+            ? props.clickRes("하우스크림", 23, 861, 2)
+            : goToStore(); //도보, 미터, 칼로리
+          m.name === "하우스크림" ? props.clickMenu() : goToStore();
         }}
       >
         <img alt={m.name} src={source} />

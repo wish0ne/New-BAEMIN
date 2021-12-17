@@ -94,12 +94,12 @@ const NaverMap = (props) => {
       var contentString = [
         '<div style="display:flex; flex-direction:column; width:270px;">',
         '<div style="display:flex">',
-        '<img src="img/하우스크림.png" style="height:90px;"/>',
-        '<img src="img/하우스크림2.jfif" style="width:90px; height:90px"/>',
-        '<img src="img/하우스크림1.jfif" style="width:90px; height:90px"/>',
+        '<img src="/img/하우스크림.png" style="height:90px;"/>',
+        '<img src="/img/하우스크림2.jfif" style="width:90px; height:90px"/>',
+        '<img src="/img/하우스크림1.jfif" style="width:90px; height:90px"/>',
         "</div>",
         "<div style='padding:0 10px 10px;'><h1 style='font-size:16px; color:#0042ED; font-weight:bold; flex-wrap:wrap;'>하우스크림</h1>",
-        "<div style='display:flex; font-size:13px; justify-content:space-around;'><div style='display:flex; align-items:center'><img src='img/star.png' style='width:13px; height:13px; margin-right:5px;'/><span>5.0</span></div><div style='display:flex; align-items:center''><img src='img/phone.png' style='width:15px; height:15px; margin-right:5px'/><span>최근주문수 (100+)</span></div><div style='display:flex; align-items:center'><img src='img/heart.png' style='width:15px; height:15px; margin-right:5px'/><span>찜 660</span></div></div></div>",
+        "<div style='display:flex; font-size:13px; justify-content:space-around;'><div style='display:flex; align-items:center'><img src='/img/star.png' style='width:13px; height:13px; margin-right:5px;'/><span>5.0</span></div><div style='display:flex; align-items:center''><img src='/img/phone.png' style='width:15px; height:15px; margin-right:5px'/><span>최근주문수 (100+)</span></div><div style='display:flex; align-items:center'><img src='/img/heart.png' style='width:15px; height:15px; margin-right:5px'/><span>찜 660</span></div></div></div>",
         "</div>",
       ].join("");
       var infowindow = new window.naver.maps.InfoWindow({
@@ -216,7 +216,7 @@ const NaverMap = (props) => {
           title: "식당",
           icon: {
             content:
-              '<img src="img/' +
+              '<img src="/img/' +
               props.markers[index].name +
               '.png" style="width:50px; height:50px; border: 1px solid black; border-radius: 30px;" />',
             //size: new window.naver.maps.Size(38, 58),
